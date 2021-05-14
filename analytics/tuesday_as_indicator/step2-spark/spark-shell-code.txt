@@ -1,0 +1,3 @@
+val lines = sc.textFile("input/covid_by_week_tuesday.txt")
+val sorted = lines.sortBy(x => x.split("\t")(1).toInt)
+sorted.coalesce(1).saveAsTextFile("final-project/by_week_sorted_tuesday")
